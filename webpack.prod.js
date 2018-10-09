@@ -4,11 +4,11 @@ const common = require('./webpack.base.js');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin'); 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const cssExtracter = new ExtractTextWebpackPlugin({
-    filename: './css/[name].[hash].css', // 直接导入的css文件，提取时添加-css标识
-    allChunks: true, // 从所有的chunk中提取，当有CommonsChunkPlugin时，必须为true
+    filename: './css/[name].[hash].css', 
+    allChunks: true, 
 });
 const lessExtracter = new ExtractTextWebpackPlugin({
-    filename: './css/[name].[hash].css', // 直接导入的sass文件，提取时添加-sass标识
+    filename: './css/[name].[hash].css', 
     allChunks: true,
 });
 module.exports = merge(common,{
